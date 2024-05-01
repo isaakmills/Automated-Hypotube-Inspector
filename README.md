@@ -1,1 +1,1 @@
-![Image](location of image in repo.type)
+![Image](QC_machine_PNG.png)
