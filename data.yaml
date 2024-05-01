@@ -1,0 +1,13 @@
+train: C:\Users\Isaak\Documents\QC machine\blackdotdatav1\train\images
+val: C:\Users\Isaak\Documents\QC machine\blackdotdatav1\valid\images
+test: C:\Users\Isaak\Documents\QC machine\blackdotdatav1\test\images
+
+nc: 1
+names: ['0']
+
+roboflow:
+  workspace: isaak-mills
+  project: machine-71xuo
+  version: 1
+  license: Public Domain
+  url: https://universe.roboflow.com/isaak-mills/machine-71xuo/dataset/1
