@@ -1,5 +1,61 @@
 ![Image](QC_machine_PNG.png)
 
+This is the repository for my Automated Cathider inspecting machine. The machine uses Yolov8 detection algorithms to detect black marks on hypotubes.
+
+
+The Problem - I was  inspired to create this project beacuse of previous experiance working at a company specializing in laser cutting hypotobes. Within the manufacting process there are mulitple steps which go into preparing a final product; One of them being quality control.
+
+Quality control is the processes of inspecting manufacured parts to ensure they are within customer specification aswell as free from manufacturing defects. Currently in laser cut hypotube manufactring quality control workers are required to visually inspect 100% of the parts. This is a very time consuming task and I relised this could be a perfect use case for a AI computer vision processs. 
+
+The Goal - Create a tool that uses computer vision and cnc technology to detect manufacturing defect without the assistance of a human operator. 
+
+Why not Key Dimentions? - From the beginning of the project my understanding of AI computer vision models was that they were good at detecting patterns but lacked the ability to measure accuratly. Manufacturing defects were a prefect example of a usecase or AI comupter vision. Key dimention detection did not. My thinking was that even if I tried to develop a machine that could detect key dimentions the AI models would require highly specialised training for each manufacting lot. Because all parts are unique this would require operatiors to spend time tweaking countless indiviual model for specific dimentions. This did not sound like a good idea. I liked the idea of having one model trained on a wide spectrum of manufacturing defects which could be used on a variaty of unique parts. 
+
+
+software design -
+why I chose yolov8, genral data pipline, Ai training process, challenges with OTG and resberry pi
+
+
+electrical design-
+setting refrenve volate on led drivers, remeber to design electrical routes, control structure,
+
+
+
+mechanical design- 
+original mechanical design with aliminum plate
+
+
+manufacturing process- 
+grinding rollers, 3d printing, fusion 360,  plastidipping, 
+
+
+
+
+
+
+
+
+
+
+ Early on in the brainstorming process I decided it would be wise to focus only on detecting manufacting defects. This was because I was looking for a simple project with a timeline of a few months. I had a rough understanding of the nessisary technology for my project to function and after further consideration relised the amount of code nessiary to create a functional machine that could detect key dimenitons would be a massive undertaking requir 
+
+
+
+ I decided this becuse manufacturing defects are 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Resources 
 
 <a href="https://docs.ultralytics.com">Ultralytics Yolov8</a>    
