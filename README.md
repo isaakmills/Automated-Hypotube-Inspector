@@ -1,42 +1,27 @@
-![Image](QC_machine_PNG.png)
+I![Image](QC_machine_PNG.png)
 
-This is the repository for my Automated Cathider inspecting machine. The machine uses Yolov8 detection algorithms to detect black marks on hypotubes.
+Quality control is outdated!
 
+The Automated Hypotube Inspector is a prototype tool designed to automate manufacturing defect detection in catheter manufacturing (CM). Currently, quality control (QC) in CM requires technicians to visually inspect 100% of the parts to ensure no manufacturing defects are present. This is a time-consuming task that this prototype solves.
 
-The Problem - I was  inspired to create this project beacuse of previous experiance working at a company specializing in laser cutting hypotobes. Within the manufacting process there are mulitple steps which go into preparing a final product; One of them being quality control.
+Software Design - The machine utilizes three computers.
+1) host computer
+2) Arduino R3
+3) Raspberry Pi W 2
 
-Quality control is the processes of inspecting manufacured parts to ensure they are within customer specification aswell as free from manufacturing defects. Currently in laser cut hypotube manufactring quality control workers are required to visually inspect 100% of the parts. This is a very time consuming task and I relised this could be a perfect use case for a AI computer vision processs. 
+First, the host computer executes main.py. The script initializes a serial connection with the Arduino microcontroller running GRBL, an open-source motion control software. The Arduino controls all motion for both the rollers and the camera gantry. The host computer calculates how far to move the camera gantry in each section and begins sending motion commands to the Arduino. Once the motion command has been executed, an image is captured by the Raspberry Pi and sent to a directory on the host computer. The Raspberry Pi is running custom firmware that configures it to be recognized as a USB camera. Once all images have been captured, they are reformatted to a uniform size, and a YOLOv8 detection algorithm is iterated throughout the image directory. Finally, the program opens a popup window containing images of all the detections and outputs the number of detections in the terminal.
 
-The Goal - Create a tool that uses computer vision and cnc technology to detect manufacturing defect without the assistance of a human operator. 
+Usage:
 
-Usage - To use the machine the operator needs to have both the raspberry pi and Arduino connected to the computer.insurd the camera functionalty is working properly by opening the camera program on the compute and waiting for feedback. Inside the main.py file there are three things the operator may need to adjust. First is the COM port of the Aduino controller, this can be found by openning the host computers device manage and looking for the arduino device. Adjust the "ser" variables first parameter to specify the COM port. Next the operator needs to adjust the part_length and part_diameter variables to match the dimentions of the part (both part_length and part_diameter are in mm). Save and close the file. Next the operator needs to set the part on the staged. The operator can run the program. As the program runs the  camera gantry will begin taking measured movments acorss the entire part and the rollers with begin rotating. once the program is complete the number of detections with be output on the command line and a folder will popup with annotated images of all detections. The operator can then visually inspect each indivdual detection and detemine whether it is nessesary to visually inspect the detetions.
+ 1.   Place the part on the stage.
+ 2.   Connect the Raspberry Pi and Arduino to the computer via USB.
+ 3.   Ensure camera functionality by opening the camera program on the host computer and waiting for feedback.
+ 4.   Open the main.py program and adjust the "ser" variable parameter for COM to match the location of the Arduino.
+ 5.   Adjust the part_length and part_diameter variables inside main.py (Units: mm).
+ 6.   Save and close main.py.
+ 7.   Run main.py.
+ 8.   The number of detections will be output in the terminal, and a popup window will open with the annotated images.
 
-
-Why not Key Dimentions? - From the beginning of the project my understanding of AI computer vision models was that they were good at detecting patterns but lacked the ability to measure accuratly. Manufacturing defects were a prefect example of a usecase or AI comupter vision. Key dimention detection did not. My thinking was that even if I tried to develop a machine that could detect key dimentions the AI models would require highly specialised training for each manufacting lot. Because all parts are unique this would require operatiors to spend time tweaking countless indiviual model for specific dimentions. This did not sound like a good idea. I liked the idea of having one model trained on a wide spectrum of manufacturing defects which could be used on a variaty of unique parts. 
-
-
-software design -
-why I chose yolov8, genral data pipline, Ai training process, challenges with OTG and resberry pi
-
-
-electrical design-
-setting refrenve volate on led drivers, remeber to design electrical routes, control structure,
-
-
-
-mechanical design- 
-original mechanical design with aliminum plate
-
-
-manufacturing process- 
-grinding rollers, 3d printing, fusion 360,  plastidipping, 
-
-
-v2 - 
-
-
-
-License - 
 
 
 
