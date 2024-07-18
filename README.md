@@ -1,4 +1,4 @@
-I![Image](QC_machine_PNG.png)
+![Image](QC_machine_PNG.png)
 
 
 
