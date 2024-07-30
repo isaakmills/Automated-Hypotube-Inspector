@@ -1,4 +1,4 @@
-![Image](imgs/QC_machine_PNG.png)
+![Image](imgs/Screenshot 2024-07-29 150720.png)
 
 
 
