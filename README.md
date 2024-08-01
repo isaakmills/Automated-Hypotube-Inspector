@@ -1,5 +1,3 @@
-![Image](imgs/Screenshot 2024-07-29 150720.png)
-
 
 
 This is a quality control tool I designed and built that uses the Ultralytics YOLOv8 computer vision AI model to detect manufactured defects in cylindrical parts similar to laser-cut hypotubes. Traditionally, laser-cut hypotubes are rolled back and forth manually to detect manufacturing defects. This predictable motion is required to perform quality control (QC) on the majority of laser-cut hypotubes. This process is tedious and repetitive for QC operators. By utilizing a tool that scans the entirety of a part and outputs potential defects with a confidence score, operators could spend more time performing other essential tasks.
